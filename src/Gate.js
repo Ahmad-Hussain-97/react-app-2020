@@ -1,5 +1,15 @@
 function Gate(props) {
-  return <div>Gate is {props.active == true ? <p>Open</p> : <p>Close</p>}</div>;
+  let Open = props.active;
+  function ToggelGate() {
+    Open = !Open;
+    console.log("Open value is", Open);
+  }
+  return (
+    <div>
+      {Open == true ? <p>Gate is Open</p> : <p>Gate is Closed</p>}
+      <button onclick={ToggelGate}>Toggle</button>
+    </div>
+  );
 }
 
 export default Gate;
