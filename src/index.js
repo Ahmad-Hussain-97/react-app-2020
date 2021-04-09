@@ -15,8 +15,6 @@ import Gate from "./Gate";
 ReactDOM.render(
   <div>
     <MediaCard
-      active={true}
-      cardNumber={1}
       title="Hello React App! using media card!"
       para="This is the paragraph to be shown in p tag"
     />

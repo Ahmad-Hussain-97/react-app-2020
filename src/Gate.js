@@ -1,13 +1,16 @@
+import React from "react";
+
 function Gate(props) {
-  let Open = props.active;
-  function ToggelGate() {
-    Open = !Open;
-    console.log("Open value is", Open);
-  }
+  const [Open, ToggelGate] = React.useState;
+  //   let Open = props.active;
+  //   function ToggelGate() {
+  //     Open = !Open;
+  //     console.log("Open value is", Open);
+  //   }
   return (
     <div>
-      {Open == true ? <p>Gate is Open</p> : <p>Gate is Closed</p>}
-      <button onclick={ToggelGate}>Toggle</button>
+      Gate is <span id="state"> {Open == true ? "Open" : "Closed"}</span>
+      <button onclick={() => ToggelGate(!Open)}>Toggle</button>
     </div>
   );
 }
