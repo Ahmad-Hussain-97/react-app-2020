@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import MediaCard from "./MediaCard";
+import Gate from "./Gate";
 
 // function H1(arg) {
 //   return (
@@ -14,9 +15,12 @@ import MediaCard from "./MediaCard";
 ReactDOM.render(
   <div>
     <MediaCard
+      active={true}
+      cardNumber={1}
       title="Hello React App! using media card!"
       para="This is the paragraph to be shown in p tag"
     />
+    <Gate active={true} cardNumber={1} />
   </div>,
   document.getElementById("root")
 );
